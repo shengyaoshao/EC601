@@ -2,7 +2,7 @@
 <hr>
 
 ## Introduction
-
+This mini-project is to get information
 
 ## User Story
 <ul>
