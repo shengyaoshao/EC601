@@ -7,8 +7,7 @@ def API_Keys():
     return [api_key, api_secret_key, access_token, access_token_secret]
 
 
-def Read_Gvis_API_Keys():
+def Read_Google_API_Keys():
     from google.oauth2 import service_account       
-    credentials = service_account.Credentials.from_service_account_file(
-    '/home/liuyu/Desktop/Project.json') # Replace with the filepath of your .json file.
+    credentials = service_account.Credentials.from_service_account_file('/home/liuyu/Desktop/Project.json') # Replace with the filepath of your .json file.
     return credentials
