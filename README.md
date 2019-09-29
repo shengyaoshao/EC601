@@ -2,7 +2,7 @@
 <hr>
 
 ## Introduction
-This is mini-project 1 of EC601 by Shao Shengyao and Yu Liu. This project is to get information from twitter and analyze sentiments from the tweets, retweets, likes, etc.
+This is mini-project 1 of EC601 by Shengyao Shao and Yu Liu. This project is to get information from twitter and analyze sentiments from the tweets, retweets, likes, etc.
 
 ## User Story
 <ul>
