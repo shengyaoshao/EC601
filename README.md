@@ -12,8 +12,8 @@ This is mini-project 1 of EC601 by Shao Shengyao and Yu Liu. This project is to 
 
 ## Used APIs:
 <ol>
-  <li>Twitter API to access the twitter content</li>
-  <li>Natural Language API to analyze sentiments</li>
+  <li>Twitter API to access the twitter content.</li>
+  <li>Natural Language API to analyze sentiments.</li>
 </ol>
 
 
