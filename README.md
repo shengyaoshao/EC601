@@ -17,5 +17,5 @@ This is mini-project 1 of EC601 by Shengyao Shao and Yu Liu. This project is to 
 </ol>
 
 
-### Architecture
+## Architecture
 <img src="https://github.com/shengyaoshao/EC601/blob/master/222X9%5DJ5%25%24Y%60ZSLN%25TGU%5D%247.png">
