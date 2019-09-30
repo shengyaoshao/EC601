@@ -13,8 +13,6 @@ import numpy as np
 import pandas as pd
 import re
 
-
-# # # # TWITTER CLIENT # # # #
 class TwitterClient():
     def __init__(self, twitter_user=None):
         self.auth = TwitterAuthenticator().authenticate_twitter_app()
@@ -42,17 +40,13 @@ class TwitterClient():
         for tweet in Cursor(self.twitter_client.home_timeline, id=self.twitter_user).items(num_tweets):
             home_timeline_tweets.append(tweet)
         return home_timeline_tweets
-
-
-# # # # TWITTER AUTHENTICATER # # # #
+       
 class TwitterAuthenticator():
 
     def authenticate_twitter_app(self):
         auth = OAuthHandler(twitter_credentials.CONSUMER_KEY, twitter_credentials.CONSUMER_SECRET)
         auth.set_access_token(twitter_credentials.ACCESS_TOKEN, twitter_credentials.ACCESS_TOKEN_SECRET)
         return auth
-
-# # # # TWITTER STREAMER # # # #
 class TwitterStreamer():
     """
     Class for streaming and processing live tweets.
@@ -96,9 +90,6 @@ class TwitterListener(StreamListener):
 
 
 class TweetAnalyzer():
-    """
-    Functionality for analyzing and categorizing content from tweets.
-    """
 
     def clean_tweet(self, tweet):
         return ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)", " ", tweet).split())
@@ -130,8 +121,9 @@ if __name__ == '__main__':
     tweet_analyzer = TweetAnalyzer()
 
     api = twitter_client.get_twitter_client_api()
-
-    tweets = api.user_timeline(screen_name="jimmyfallon", count=200)
+    print('Enter the Twitter account name')
+    screen_name = input()
+    tweets = api.user_timeline(screen_name, count=200)
     df = tweet_analyzer.tweets_to_data_frame(tweets)
     df['sentiment'] = np.array([tweet_analyzer.analyze_sentiment(tweet) for tweet in df['tweets']])
     print(df.head(20))
